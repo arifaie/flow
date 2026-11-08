@@ -1,0 +1,143 @@
+/* ==========================================================================
+   Flow — Material Minimal Design System Tokens
+   Material Design 3 tonal surfaces + Linear/TickTick crisp minimalism
+   ========================================================================== */
+
+:root {
+  /* Surface Palette */
+  --bg-canvas: #F8FAFC;
+  --bg-surface: #FFFFFF;
+  --bg-tonal: #F1F5F9;
+  --bg-tonal-subtle: #F8FAFC;
+  --bg-tonal-hover: #E2E8F0;
+  --bg-elevated: rgba(255, 255, 255, 0.92);
+  --bg-scrim: rgba(15, 23, 42, 0.32);
+
+  /* Borders (1px crisp subtle structure) */
+  --border-subtle: #E2E8F0;
+  --border-default: #CBD5E1;
+  --border-focus: #3B82F6;
+
+  /* Slate Typography Palette */
+  --text-primary: #0F172A;
+  --text-secondary: #334155;
+  --text-muted: #64748B;
+  --text-subtle: #94A3B8;
+  --text-inverse: #FFFFFF;
+
+  /* Brand & Interactive Accent (Cobalt / Indigo) */
+  --accent: #2563EB;
+  --accent-hover: #1D4ED8;
+  --accent-soft: #EFF6FF;
+  --accent-soft-hover: #DBEAFE;
+  --accent-border: #BFDBFE;
+  --accent-text: #1E40AF;
+
+  /* My Day / Sun Warm Amber */
+  --sun: #F59E0B;
+  --sun-strong: #B45309;
+  --sun-soft: #FEF3C7;
+  --sun-border: #FDE68A;
+  --sun-glow: 0 0 0 3px rgba(245, 158, 11, 0.16), 0 2px 8px rgba(245, 158, 11, 0.22);
+
+  /* 3-State Backbone Semantic Colors */
+  --state-open: #64748B;
+  --state-open-soft: #F1F5F9;
+  --state-active: #2563EB;
+  --state-active-soft: #EFF6FF;
+  --state-done: #10B981;
+  --state-done-soft: #ECFDF5;
+  --state-done-border: #A7F3D0;
+
+  /* Blocker / Alert (Subtle Crimson/Rose) */
+  --danger: #E11D48;
+  --danger-strong: #BE123C;
+  --danger-soft: #FFF1F2;
+  --danger-border: #FECDD3;
+
+  /* Radii (Strict Spec: 12px containers/columns, 8px cards, 9999px tag pills) */
+  --radius-container: 12px;
+  --radius-card: 8px;
+  --radius-sm: 6px;
+  --radius-pill: 9999px;
+  --radius-sheet: 20px;
+
+  /* Shadows */
+  --shadow-xs: 0 1px 2px rgba(15, 23, 42, 0.03);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04);
+  --shadow-card-hover: 0 6px 16px -4px rgba(15, 23, 42, 0.08), 0 2px 6px -2px rgba(15, 23, 42, 0.04);
+  --shadow-drag: 0 16px 32px -6px rgba(15, 23, 42, 0.16), 0 4px 10px -2px rgba(15, 23, 42, 0.08);
+  --shadow-popover: 0 12px 28px -4px rgba(15, 23, 42, 0.12), 0 4px 10px -2px rgba(15, 23, 42, 0.05);
+  --shadow-fab: 0 8px 20px -2px rgba(37, 99, 235, 0.38), 0 2px 6px rgba(15, 23, 42, 0.12);
+
+  /* Layout Dimensions */
+  --sidebar-width: 260px;
+  --drawer-width: 380px;
+  --header-height: 60px;
+  --mobile-nav-height: 64px;
+
+  /* Typography */
+  --font-sans: 'Inter', 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --duration-fast: 150ms;
+  --duration-normal: 240ms;
+}
+
+/* Base Reset */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--text-primary);
+  background-color: var(--bg-canvas);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overscroll-behavior-y: none;
+}
+
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+/* Subtle Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.42);
+  border-radius: var(--radius-pill);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(100, 116, 139, 0.65);
+}
+
+/* Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 1px;
+}
