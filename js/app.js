@@ -2738,8 +2738,10 @@ window.Flow = window.Flow || {};
           });
         }
       } else if (e.target.closest('#btn-reset-demo')) {
-        Store.resetDemoData();
-        showToast('Restored rich demo workspace');
+        if (window.confirm('Clear all tasks, projects, and folders in this workspace?')) {
+          Store.resetDemoData();
+          showToast('Workspace cleared');
+        }
       }
     });
 

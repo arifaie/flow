@@ -3,12 +3,13 @@
 window.Flow = window.Flow || {};
 
 (function (ns) {
-  const STORAGE_KEY = 'flow_workspace_v1';
+  const STORAGE_KEY = 'flow_workspace_v2';
 
   /* Clean Repository Adapter (swappable for REST / IndexedDB / Supabase later) */
   const StorageRepository = {
     load() {
       try {
+        localStorage.removeItem('flow_workspace_v1');
         const raw = localStorage.getItem(STORAGE_KEY);
         if (!raw) return null;
         return JSON.parse(raw);
